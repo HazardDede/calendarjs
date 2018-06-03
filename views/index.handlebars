@@ -1,3 +1,16 @@
-<canvas id='snow'></canvas>
+{{> jukebox }}
 
-<script type="text/javascript" src="js/snow.js"></script>
+{{> snow }}
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        var playlist = [
+            {
+                title: "Carol of the Bells v1",
+                url: "playlist/Carol of the Bells v1.mp3"
+            }
+        ]
+        initJukebox($, playlist, true);
+        letItSnow();
+    })
+</script>

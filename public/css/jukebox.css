@@ -1,0 +1,47 @@
+#jukebox {
+    background-color:#cc0000;
+    border-radius: 8px;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    color:#fff;
+    padding:8px;
+    font-family:MountainsOfChristmas;
+    font-weight:bold;
+    width:260px;
+    /* Above canvas right-bottom */
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    z-index: 30000;
+}
+#jukebox .loader {
+    border:1px solid #fff;
+    height:5px;
+    margin:5px 0px
+}
+#jukebox .load-progress {
+    width:0px;
+    background-color:#fff;
+    height:5px;
+}
+#jukebox .play-progress {
+    width:0px;
+    background-color:#9999cc;
+    height:5px;
+}
+
+#jukebox .controls {
+    text-align:center;
+}
+
+#jukebox .controls a {
+    display:inline-block;
+    width:33px;
+    height:33px;
+    margin:0px 12px;
+    overflow:hidden;
+}
+
+#jukebox .controls a:hover {
+    background-color:#ff9900;
+}

@@ -1,6 +1,9 @@
 # IDE's
 .vscode/
 
+# Resources with copyright terms
+public/playlist/*.mp3
+
 # Logs
 logs
 *.log
