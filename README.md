@@ -1,2 +1,2 @@
 # calendarjs
-Christmas advent calendar
+Christmas advent calendar for family
