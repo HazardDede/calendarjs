@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'MountainsOfChristmas';
+    src: url('MountainsofChristmas.ttf') format('truetype');
+}
+
 body {
     background-color: black;
     color: white;
-    font-family:MountainsOfChristmas;
+    font-family: 'MountainsOfChristmas';
     overflow: hidden;
 }

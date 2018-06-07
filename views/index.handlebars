@@ -4,13 +4,16 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-        var playlist = [
-            {
-                title: "Carol of the Bells v1",
-                url: "playlist/Carol of the Bells v1.mp3"
-            }
-        ]
-        initJukebox($, playlist, true);
         letItSnow();
+        
+        $.ajax({
+            url: "/playlist",
+            success: function(result) {
+                initJukebox($, result, true);
+            },
+            error: function(xhr,status,error) {
+                console.log(error);
+            }
+        })
     })
 </script>

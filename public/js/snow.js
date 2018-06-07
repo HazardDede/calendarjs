@@ -4,21 +4,16 @@ function letItSnow() {
     var w = c.width = window.innerWidth, 
         h = c.height = window.innerHeight;
 
-    window.addEventListener('resize', function(){
-        c.width = w = window.innerWidth;
-        c.height = h = window.innerHeight;
-    }, false);
-
     function Flake() {
         this.draw = function() {
-        this.g = $.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.sz);
-        this.g.addColorStop(0, 'hsla(255,255%,255%,1)');
-        this.g.addColorStop(1, 'hsla(255,255%,255%,0)');
-        $.moveTo(this.x, this.y);
-        $.fillStyle = this.g;
-        $.beginPath();
-        $.arc(this.x, this.y, this.sz, 0, Math.PI * 2, true);
-        $.fill();
+            this.g = $.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.sz);
+            this.g.addColorStop(0, 'hsla(255,255%,255%,1)');
+            this.g.addColorStop(1, 'hsla(255,255%,255%,0)');
+            $.moveTo(this.x, this.y);
+            $.fillStyle = this.g;
+            $.beginPath();
+            $.arc(this.x, this.y, this.sz, 0, Math.PI * 2, true);
+            $.fill();
         }
     }
 
@@ -62,6 +57,13 @@ function letItSnow() {
         }
         go();
     }
+
+    window.addEventListener('resize', function(){
+        c.width = w = window.innerWidth;
+        c.height = h = window.innerHeight;
+        
+    }, false);
+
     flakes = init();
     run(flakes);
 }
